@@ -8,3 +8,5 @@ The function forestES creates a forest plot for effect sizes and standard errors
 
 ## Mini Manhattan Plots
 The function miniman created a regional Manhattan plot for genomic data, with genomic position on the x-axis, -log10(p) of the y-axis and a genomic track underneath. Points on the Manhattan can also be coloured for direction of effect. Exampleminman provides example code for making the plot.
+
+![image](https://github.com/UoE-Dementia-Genomics/Created_Functions/assets/42999172/7b6c828b-51c9-4df1-a4cc-f861bbf4a69f)

@@ -71,6 +71,9 @@ trans[is.na(trans$SYMBOL) == "FALSE",]->trans
 if(is.null(genelines)){
 	genelines = nrow(trans)
 	}
+if(is.null(ylim)){
+	ylim=c(0,genelines +1)
+	}	
 	
 rep(1:max(genelines), times=ceiling(nrow(trans)/max(genelines)))->gl
 gl[1:nrow(trans)]->gl
@@ -80,7 +83,7 @@ subsetByOverlaps(exonsBy(txdb, by = "tx"), gr)->exons
 exons[rownames(trans)]->exons
 
 par(mar=c(1,3,1,2)+ 0.1) 
-plot(0,0,type="n", xlim=xlim, ylim=c(0,genelines +1), axes=FALSE, xlab="", 
+plot(0,0,type="n", xlim=xlim, ylim=ylim, axes=FALSE, xlab="", 
 ylab="", xpd=FALSE)
 
 for(g in 1:nrow(cpg)){
